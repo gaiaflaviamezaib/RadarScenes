@@ -1,0 +1,6 @@
+experiment,model,n_train,n_test,accuracy,macro_f1
+experiment_A_point_level,random_forest,36002,9755,0.08026652998462327,0.030929056723021014
+experiment_B_track_level,random_forest,1768,457,0.824945295404814,0.5446800401597781
+experiment_B_track_level,logistic_regression,1768,457,0.6739606126914661,0.4048820788474359
+experiment_B_track_level,gaussian_nb,1768,457,0.5185995623632386,0.40179221882500993
+experiment_B_track_level,xgboost,1768,457,0.8315098468271335,0.6453661042811646

@@ -1,0 +1,6 @@
+Processed sequences: 50
+Total radar detections: 28,749,044
+Total camera images: 10,971
+Total odometry samples: 438,809
+Distinct sequence durations: 50
+Distinct detection counts: 50

@@ -1,0 +1,112 @@
+.model-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.model-controls label {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.experiment-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #f0fdf4;
+  color: #059669;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-subtle);
+  background: var(--bg-surface);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.leaderboard-table th {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.leaderboard-table th:hover {
+  background: var(--border-subtle);
+  color: var(--text-main);
+}
+
+.leaderboard-table th.sort-active {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.leaderboard-table th.sort-active:hover {
+  background: var(--accent-primary-hover);
+}
+
+.leaderboard-table tbody tr {
+  transition: background 0.2s;
+}
+
+.leaderboard-table tbody tr:hover {
+  background: var(--bg-base);
+}
+
+.leaderboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-table .top-row td {
+  background: #f0fdf4;
+  font-weight: 600;
+}
+
+.leaderboard-table .top-row:hover td {
+  background: #dcfce7;
+}
+
+.model-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.experiment-name {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.highlight-metric {
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.leaderboard-table .top-row .highlight-metric {
+  color: #059669;
+}

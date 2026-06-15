@@ -1,0 +1,28 @@
+# ── Raw dataset (not distributed with the repo) ──────────
+/data/
+*.h5
+
+# ── Parquet caches ────────────────────────────────────────
+_seq_cache/
+*.parquet
+
+# ── Trained models and heavy CSVs ────────────────────────
+outputs/models/
+outputs/tables/radar_points_features.csv
+outputs/tables/radar_track_features.csv
+outputs/tables/model_predictions*.csv
+
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# ── Node (React dashboard) ───────────────────────────────
+outputs/website_react/node_modules/
+outputs/website_react/dist/
+
+# ── OS junk ───────────────────────────────────────────────
+.DS_Store
