@@ -73,4 +73,15 @@ python src/models/train.py           # Model training & evaluation
 | `outputs/models/`  | Serialised classifiers (`.joblib`)                 |
 | `outputs/figures/`  | Plots (label distribution, sensor coverage, etc.) |
 | `outputs/website_react/` | Interactive React dashboard — run with `npm run dev` |
-# RadarScenes
+## Live Dashboard & Local Execution
+
+**Live Version:** The interactive portfolio dashboard is deployed on Vercel and can be viewed here: [https://radar-scenes.vercel.app/](https://radar-scenes.vercel.app/)
+
+**Run Locally:**
+To run the dashboard locally on your own machine:
+```bash
+cd outputs/website_react
+npm install
+npm run dev
+```
+Then open `http://localhost:5173` (or the port shown in your terminal) in your browser.
