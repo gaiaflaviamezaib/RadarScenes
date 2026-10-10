@@ -15,6 +15,10 @@ src/
     link_sensors.py          # Radar–camera–odometry timestamp alignment
   models/
     train.py                 # Experiment A (point-level) & B (track-level)
+    evaluate.py              # Imbalance-aware evaluation metrics
+    feature_selection.py     # Feature usefulness analysis
+  visualization/
+    visualize_dataset.py     # Exploratory plots
   utils.py                   # Shared helpers
 outputs/
   tables/                    # Generated CSVs (metrics, overview)
@@ -51,14 +55,14 @@ You can adjust the maximum count in `config.py` (`MAX_SEQUENCES`).
 brew install libomp
 ```
 
-**Step 1 — Create a virtual environment and install dependencies:**
+**Step 1: Create a virtual environment and install dependencies:**
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Step 2 — Run the pipeline scripts in order:**
+**Step 2: Run the pipeline scripts in order:**
 ```bash
 python src/data/overview.py          # Dataset statistics
 python src/data/build_features.py    # Feature extraction (point + track)
@@ -72,7 +76,8 @@ python src/models/train.py           # Model training & evaluation
 | `outputs/tables/`  | CSV metrics (`training_summary_metrics.csv`, etc.) |
 | `outputs/models/`  | Serialised classifiers (`.joblib`)                 |
 | `outputs/figures/`  | Plots (label distribution, sensor coverage, etc.) |
-| `outputs/website_react/` | Interactive React dashboard — run with `npm run dev` |
+| `outputs/website_react/` | Interactive React dashboard (run with `npm run dev`) |
+
 ## Live Dashboard & Local Execution
 
 **Live Version:** The interactive portfolio dashboard is deployed on Vercel and can be viewed here: [https://radar-scenes.vercel.app/](https://radar-scenes.vercel.app/)
