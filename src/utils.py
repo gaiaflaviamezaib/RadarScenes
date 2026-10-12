@@ -154,8 +154,10 @@ def engineer_radar_features(df: pd.DataFrame) -> pd.DataFrame:
 def clean_track_ids(df: pd.DataFrame) -> pd.DataFrame:
     if "track_id" in df.columns:
         s = df["track_id"].astype(str).str.strip()
-        # Pandas string missing values can appear as "nan" or "<NA>" once cast.
-        df["track_id_clean"] = s.mask(s.isin(["", "nan", "<NA>", "None", "0"]), "untracked")
+        # Pandas string missing values can appear as "nan" or "<NA>" once cast,
+        # or stay missing (pandas >= 3), so check both.
+        missing = df["track_id"].isna() | s.isin(["", "nan", "<NA>", "None", "0"])
+        df["track_id_clean"] = s.mask(missing, "untracked")
     return df
 
 
