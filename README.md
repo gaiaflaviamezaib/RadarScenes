@@ -20,6 +20,7 @@ src/
   visualization/
     visualize_dataset.py     # Exploratory plots
   utils.py                   # Shared helpers
+tests/                       # Tests on synthetic data
 outputs/
   tables/                    # Generated CSVs (metrics, overview)
   figures/                   # Generated plots
@@ -68,6 +69,8 @@ python src/data/overview.py          # Dataset statistics
 python src/data/build_features.py    # Feature extraction (point + track)
 python src/models/train.py           # Model training & evaluation
 ```
+
+**Tests:** `python -m pytest` checks the sequence-level split and the feature helpers on small synthetic tables, so it does not need the dataset.
 
 ## Output
 
